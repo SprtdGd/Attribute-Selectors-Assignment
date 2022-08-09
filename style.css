@@ -1,0 +1,80 @@
+
+/* If class equals 'instructions' change list style to square  */
+
+[class="instructions"] {
+    list-style: square;
+
+}
+
+/* If class contains 'menu' apply menu styling (horizontal) from last menu assignment. */
+
+[class*="menu"] {
+    background-color: #3483eb;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+    border-radius: 15px;
+    padding: 2.5px 0;
+    overflow: hidden;  
+    width: 200px;    
+
+}
+
+
+[class*="menu"] li {
+    display: block;   
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    border-top: 5px solid #3483eb;
+
+}
+
+[class*="menu"] li a:link{
+    text-decoration: none;
+   }
+   
+   [class*="menu"] li a:link, [class*="menu"] li a:visited{
+     color: white;
+   }
+   
+   [class*="menu"] li:hover{
+     background-color: #345beb;
+     border-radius: 10px;
+     border-top: 5px solid #5234eb;
+    
+   }
+   
+   [class*="menu"] li:hover a:link, [class*="menu"] li:hover a:visited { color: white;}
+
+
+/* If class exact matches 'first' set background-color to gray. */
+
+   [class|="first"] {
+    background-color: gray;
+   }
+
+   /* If class ends with 'sixty' set background-color to light-blue.*/
+
+   [class$="sixty"] {
+    background-color: green;
+   }
+
+   /*  If class contains '-const' set color to green. */
+
+   [class*="cost"] {
+    color: green;
+    
+   }
+
+
+   /* If class starts with 'last' set font to bold, color to red and underline text */
+   
+   [class^="last"] {
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+
+   }
